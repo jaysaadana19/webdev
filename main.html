@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Frontend Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Simple Webpage</h1>
+    <p>This is a basic example of a webpage with HTML, CSS, and JavaScript.</p>
+    <button id="changeColorButton">Change Background Color</button>
+
+    <script>
+        const button = document.getElementById('changeColorButton');
+        const body = document.body;
+
+        button.addEventListener('click', () => {
+            // Generate a random color
+            const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+            
+            // Change the background color
+            body.style.backgroundColor = randomColor;
+        });
+    </script>
+</body>
+</html>
